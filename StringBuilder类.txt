@@ -1,0 +1,55 @@
+1. StringBuilder类的常用方法
+
+1）append()方法
+使用append()方法可实现字符串的拼接操作，返回拼接后的StringBuilder对象。
+
+2）reverse()方法
+使用reverse()方法可实现StringBuilder字符串的反转操作。
+
+3）delete(int start, int end)方法
+删除字符串中指定索引范围为 [start,end) 的所有内容。
+
+实例：
+StringBuilder sb = new StringBuilder("hello");
+sb.append("world");
+sb.delete(5,8);  //删除索引范围为[5,8)内的所有内容，即从w开始删除到l之前
+System.out.println(sb);  //输出hellold
+
+
+4）insert(int start, 任意数据类型)方法
+在索引start处开始插入任意数据类型的内容。插入内容的起始索引是start。
+实例：
+StringBuilder sb1 = new StringBuilder("hello");
+sb1.insert(2,77);
+System.out.println(sb1);  //输出he77llo
+sb1.insert(3,"ooo");
+System.out.println(sb1);  //输出he7ooo7llo
+
+
+2. StringBuilder与String的相互转换
+
+1）String转为StringBuilder
+① 构造方法StringBuilder(String str)
+实例：
+StringBuilder sb = new StringBuilder("hello"); 
+
+② 字符串拼接方法append(String str)
+实例：
+String str = sb.toString();
+
+2）StringBuilder转为String
+通过StringBuilder对象调用toString()方法
+实例：
+String str = sb.toString();
+
+
+
+
+
+
+
+
+
+————————————————
+版权声明：本文为CSDN博主「小鱼丸泡泡」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_62756510/article/details/124698100
